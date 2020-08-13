@@ -76,7 +76,6 @@ export default {
         })
         count += 1
       }
-      console.log("/////////////////////////", cartData);
       cartData.forEach(item => {
         amount = amount + item.price * item.number
       })
@@ -123,6 +122,14 @@ export default {
         amount
       }
     },
+    storageData(state, { data }) {
+      return {
+        ...state,
+        cartData: data._cartData,
+        count: data._count,
+        amount: data._amount
+      }
+    },
     remoteData(state, { payload: { id, size } }) {
       const { cartData } = state
       // console.log("removeData/////////////////////",id);
@@ -151,14 +158,6 @@ export default {
         cartData,
         count,
         amount
-      }
-    },
-    storageData(state, { data }) {
-      return {
-        ...state,
-        cartData: data._cartData,
-        count: data._count,
-        amount: data._amount
       }
     },
     settlement(state, payload){

@@ -12,7 +12,7 @@ import {
     count: cart.count
 }))
 
-class Goods extends React.Component {
+class Product extends React.Component {
     constructor() {
         super()
         this.state = {
@@ -67,13 +67,13 @@ class Goods extends React.Component {
                         />
                     }
                     trigger="click">
-                    <Button style={{ backgroundColor: 'brown', color: "#fff" }} size="large" block>添加到购物车</Button>
+                    <Button style={{ backgroundColor: 'brown', color: "#fff" }} size="large" block>Add To Cart</Button>
                 </Popover>
             </Card>
         ));
         return (
             <>
-                <div><h3 style={{ marginLeft: "-600px" }}>{` 当前的商品数为${productData.length} 件`}</h3></div>
+                <div><h3 style={{ marginLeft: "-600px" }}>{` ${productData.length} was Found`}</h3></div>
                 <div style={{ display: 'flex', flexFlow: 'row wrap', justifyContent: 'space-around' }}>
                     {this.state.key ? (<div className="icons-list" style={{ fontSize: "50px",textAlign: "center" }}>
                         <SyncOutlined spin />
@@ -84,4 +84,4 @@ class Goods extends React.Component {
         )
     }
 }
-export default Goods;
+export default Product;

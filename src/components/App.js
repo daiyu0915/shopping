@@ -18,8 +18,9 @@ import React from 'react';
 // import Filter from '../Shelf/Filter';
 // import FloatCart from '../FloatCart';
 // import Productlist from './Productlist';
-import List from './List';
-import Goods from './Goods';
+import Goods from './List';
+import Product from './Goods';
+// import Product from './Product';
 
 const App = () => (
   <React.Fragment>
@@ -30,8 +31,8 @@ const App = () => (
       {/* <List /> */}
       </div>
       <div style={{display:'flex',justifyContent:'space-around'}}>
+      <Product/>
       <Goods />
-      <List />
       </div>
     </main>
     {/* <FloatCart /> */}
